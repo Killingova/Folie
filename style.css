@@ -1,0 +1,272 @@
+/* Farbliche Variablen */
+:root {
+    --moonstone: #0fa3b1ff;
+    --uranian-blue: #b5e2faff;
+    --baby-powder: #f9f7f3ff;
+    --vanilla: #eddea4ff;
+    --atomic-tangerine: #f7a072ff;
+}
+
+/* Reset & Basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--baby-powder);
+    color: #333;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: var(--moonstone);
+    color: white;
+}
+
+header .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--uranian-blue);
+}
+
+/* Hero-Bereich */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, var(--moonstone), var(--uranian-blue));
+    color: white;
+}
+
+#hero h1 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--baby-powder);
+    color: var(--moonstone);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--moonstone);
+    color: white;
+}
+
+/* Profil-Bereich */
+#profile {
+    padding: 40px 20px;
+    background: var(--vanilla);
+    text-align: center;
+}
+
+#profile h2 {
+    color: var(--moonstone);
+    margin-bottom: 15px;
+}
+
+#profile p {
+    max-width: 800px;
+    margin: 0 auto 15px;
+    line-height: 1.6;
+}
+
+/* Projekte */
+#projects {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#projects h2 {
+    color: var(--moonstone);
+    margin-bottom: 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.project {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.project h3 {
+    margin-top: 15px;
+    color: var(--moonstone);
+}
+
+/* Fähigkeiten */
+#skills {
+    padding: 40px 20px;
+    background: var(--uranian-blue);
+    text-align: center;
+}
+
+#skills h2 {
+    color: var(--moonstone);
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    background: white;
+    color: var(--moonstone);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.skill-item:hover {
+    background: var(--moonstone);
+    color: white;
+}
+
+/* Zertifikate */
+#certs {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#certs h2 {
+    color: var(--moonstone);
+    margin-bottom: 20px;
+}
+
+#certs ul {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 15px;
+}
+
+#certs ul li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* Kontakt */
+#contact {
+    padding: 40px 20px;
+    background: var(--atomic-tangerine);
+    color: white;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 15px;
+}
+
+#contact-info {
+    margin-top: 20px;
+}
+
+#contact-info p {
+    margin: 6px 0;
+}
+
+#contact-info a {
+    color: var(--baby-powder);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact-info a:hover {
+    color: var(--vanilla);
+}
+
+/* Footer */
+footer {
+    background: var(--moonstone);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
