@@ -1,4 +1,4 @@
-/* Farbliche Variablen */
+/* =============== Farbvariablen =============== */
 :root {
     --moonstone: #0fa3b1ff;
     --uranian-blue: #b5e2faff;
@@ -7,7 +7,7 @@
     --atomic-tangerine: #f7a072ff;
 }
 
-/* Reset & Basics */
+/* =============== Reset & Basics =============== */
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +21,7 @@ body {
     line-height: 1.5;
 }
 
+/* =============== Header =============== */
 header {
     display: flex;
     justify-content: space-between;
@@ -55,7 +56,7 @@ nav ul li a:hover {
     color: var(--uranian-blue);
 }
 
-/* Hero-Bereich */
+/* =============== Hero-Bereich =============== */
 #hero {
     text-align: center;
     padding: 60px 20px;
@@ -89,25 +90,60 @@ nav ul li a:hover {
     color: white;
 }
 
-/* Profil-Bereich */
+/* Profil-Sektion: Hintergrundbild links */
 #profile {
-    padding: 40px 20px;
-    background: var(--vanilla);
-    text-align: center;
-}
-
-#profile h2 {
-    color: var(--moonstone);
-    margin-bottom: 15px;
-}
-
-#profile p {
-    max-width: 800px;
-    margin: 0 auto 15px;
+    position: relative;
+    min-height: 500px;  /* Höhe anpassen nach Bedarf */
+    padding: 80px 5%;
+    /* Grundfarbe, falls Bereiche des Bildes transparent sind */
+    background: #faf2d4;  
+    background-image: url("Logo_Woman0.png");
+    background-repeat: no-repeat;
+    background-position: left center;    /* Bild links zentriert */
+    background-size: contain;            /* Bild vollständig sichtbar */
+  }
+  
+  /* Halbtransparenter Textbereich rechts */
+  .profile-textbox {
+    max-width: 50%;
+    margin-left: auto;  /* schiebt den Kasten an die rechte Seite */
+    background: rgba(255,255,255,0.6);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    color: #333;
+  }
+  
+  .profile-textbox h2 {
+    color: #0fa3b1; /* Falls du dein 'moonstone' nutzen möchtest */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-textbox p {
+    font-size: 1.1rem;
     line-height: 1.6;
-}
-
-/* Projekte */
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive Anpassung */
+  @media (max-width: 768px) {
+    #profile {
+      min-height: auto; 
+      background-position: center bottom; 
+      background-size: cover; /* oder '200px', je nach Geschmack */
+    }
+  
+    .profile-textbox {
+      max-width: 90%;   /* mehr Platz für Text */
+      margin-left: auto;
+      margin-right: auto; /* zentrierter Textkasten */
+      background: rgba(255,255,255,0.85);
+    }
+  }
+  
+  
+/* =============== Projekte =============== */
 #projects {
     padding: 40px 20px;
     text-align: center;
@@ -148,7 +184,7 @@ nav ul li a:hover {
     color: var(--moonstone);
 }
 
-/* Fähigkeiten */
+/* =============== Fähigkeiten =============== */
 #skills {
     padding: 40px 20px;
     background: var(--uranian-blue);
@@ -184,7 +220,7 @@ nav ul li a:hover {
     color: white;
 }
 
-/* Zertifikate */
+/* =============== Zertifikate =============== */
 #certs {
     padding: 40px 20px;
     text-align: center;
@@ -207,7 +243,7 @@ nav ul li a:hover {
     line-height: 1.4;
 }
 
-/* Kontakt */
+/* =============== Kontakt =============== */
 #contact {
     padding: 40px 20px;
     background: var(--atomic-tangerine);
@@ -237,7 +273,7 @@ nav ul li a:hover {
     color: var(--vanilla);
 }
 
-/* Footer */
+/* =============== Footer =============== */
 footer {
     background: var(--moonstone);
     color: white;
@@ -249,7 +285,7 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* Media Queries */
+/* =============== Media Queries =============== */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
